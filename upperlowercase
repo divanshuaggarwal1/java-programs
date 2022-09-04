@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class comp {
+    public static void main(String[] args) {
+            System.out.println("enter ");
+           char ch;
+            Scanner sc = new Scanner(System.in);
+            ch= sc.next().charAt(0);
+            if(ch>='a' && ch<='z'){
+                System.out.println("lowecase alphabet/letter");
+            }
+            if(ch>='A' && ch<='Z'){
+                System.out.println("uppercase alphabet/letter");
+            }
+            if(ch>='0' && ch<='9'){
+                System.out.println("This is number");
+            }
+            else{
+                System.out.println("You entered some special character");
+            }
+        }
+    }
