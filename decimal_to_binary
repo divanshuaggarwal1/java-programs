@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class decimaltobinary {
+    public static void main (String[]args){
+        int n,i=0;
+        int ans=0;
+        Scanner sc =new Scanner(System.in);
+        n= sc.nextInt();
+        while(n!=0){
+             int bit = n&1;
+             ans=  (int)(bit*Math.pow(10,i))+ans;
+             n=n>>1;
+             i++;
+        }
+        System.out.println(ans);
+    }
+}
