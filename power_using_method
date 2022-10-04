@@ -1,0 +1,27 @@
+import java.util.*;
+class Main {
+
+  // create a method
+  public int power(int a, int b)
+  {
+     int answer =1;
+     for(int i= 1; i<=b; i++){
+     answer = answer * a;}
+    // return value
+    return answer;
+  }
+
+  public static void main(String[] args) {
+  int a,b;
+    Scanner sc= new Scanner(System.in);
+        a= sc.nextInt();
+        System.out.println("enter the value of b");
+        Scanner sc1= new Scanner(System.in);
+        b= sc1.nextInt();
+    // create an object of Main
+    Main obj = new Main();
+    // calling method
+    int result = obj.power(a, b);
+    System.out.println("power is: " + result);
+  }
+}
