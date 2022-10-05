@@ -1,0 +1,19 @@
+import java.util.*;
+public class even_odd {
+     public static void isEven(int a){
+          int num =a&1;
+        if(num==1){
+            System.out.println("odd");
+        }
+        else{
+            System.out.println("even");
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("enter the num");
+        Scanner sc = new Scanner(System.in);
+        int a= sc.nextInt();
+        isEven(a);
+    }
+    
+}
