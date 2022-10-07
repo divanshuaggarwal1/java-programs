@@ -1,0 +1,17 @@
+import java.util.*;
+public class counting_using_method {
+public static void counting(int n )
+{ 
+     for(int i=0; i<=n; i++){
+        System.out.print(i +" ");
+     }   
+    }
+
+    public static void main(String[] args) {
+        int n;
+        Scanner sc = new Scanner(System.in);
+        n=sc.nextInt();
+        counting(n);
+    }
+    
+}
