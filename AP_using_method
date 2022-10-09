@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class ap_using_method {
+    public static int isap(int n){
+           int ap= (3*n)+7  ;
+           return ap;
+}
+public static void main(String[] args) {
+    int n;
+    System.out.println("enter the number you want to calculate ");
+    Scanner sc= new Scanner(System.in);
+    n= sc.nextInt();
+    
+    System.out.println(isap(n));
+    }
+}
