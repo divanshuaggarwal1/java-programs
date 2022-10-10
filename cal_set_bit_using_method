@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class cal_no_of_ones 
+    {
+    public static void main(String[] args) {
+        int a,b;
+        System.out.println("enter a");
+        Scanner sc= new Scanner(System.in);
+        a=sc.nextInt();
+        System.out.println("enter b");
+        b= sc.nextInt();
+        int ans1=setBitsA(a);
+        int ans2=setBitsB(b);
+        System.out.println("no of 1 in a is "+ ans1);
+        System.out.println("no of 1 in b is "+ans2);
+        System.out.println("no of 1 in a and b is "+ (ans1+ans2));
+    }
+    public static int setBitsA(int a){
+    int count=0;
+    int bit;
+    while(a!=0){
+        bit=a&1;
+        if(bit==1){
+           count++;
+        }
+        a= a>>1;
+    }
+        return count;
+    }
+   public static int setBitsB(int b){
+        int count=0;
+        int bit;
+        while(b!=0){
+            bit= b&1;
+            if(bit==1){
+               count++;
+            }
+            b= b>>1;
+        }
+            return count;
+        }
+}
