@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class linear_search {
+    public static boolean search(int arr[] , int size, int key ){
+        for (int i=0; i<size; i++){
+            if(arr[i]==key){return true;}
+        }
+        return false;
+
+   }
+    public static void main(String[] args) {
+        int key;
+       int arr[]= {2,9,8,0,7,4,5,7,3,7};
+       System.out.println("enter key value");
+       Scanner sc = new Scanner(System.in);
+       key = sc.nextInt();
+       boolean found = search(arr, 10, key);
+       if (found){
+        System.out.println("key is present");
+       }
+       else
+       System.out.println("not present");
+
+    }
+}
