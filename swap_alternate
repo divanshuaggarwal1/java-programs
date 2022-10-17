@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.Collections;
+public class swapping_specific {
+    public static void main(String[] args) {
+         ArrayList<Integer> ArrList = new ArrayList<Integer>();
+        ArrList.add(1);
+        ArrList.add(2);
+        ArrList.add(3);
+        ArrList.add(4);
+        ArrList.add(5);
+        ArrList.add(6);
+        
+        System.out.println("Before Swap the ArrayList ");
+        System.out.println(ArrList);
+        Collections.swap(ArrList, 0, 1);
+       Collections.swap(ArrList, 2, 3);
+        Collections.swap(ArrList, 4, 5);
+        System.out.println("After Swap the ArrayList");
+        System.out.println(ArrList);
+    }
+}
