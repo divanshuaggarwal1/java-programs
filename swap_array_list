@@ -1,0 +1,22 @@
+import java.util.*;
+public class swap_array {
+    public static void print( List<Integer> list ){
+            System.out.println(list);          
+    }
+    public static void reverse( List<Integer> list ){
+        int start = 0;
+        int end = list.size() -1;
+        while(start<=end){
+            Collections.swap(list , start, end);    
+            start++;
+            end--;
+
+        }
+    }
+    public static void main(String[] args) {
+        List<Integer> list  = Arrays.asList(1,2,3,4,5,6);
+        reverse(list);
+        print(list);
+    }
+    
+}
