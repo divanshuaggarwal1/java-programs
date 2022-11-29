@@ -1,0 +1,21 @@
+import java.util.*;
+public class days {
+    public static void main(String[] args) {
+        int num1;
+        System.out.println("Enter no of days");
+        Scanner sc = new Scanner(System.in);
+        int days=sc.nextInt();
+        if (days<30){
+            num1=days;
+            System.out.println("days are "+ num1);
+        }
+        else
+        {
+            int year= days/365;
+            num1= (days- year*365)/30;
+           int num2=(days- year*365)/30 - num1*30;
+            System.out.println("year are "+year+"\nMonths are "+ num1 + "\n Days are " + num2);
+        }
+
+    }
+}
