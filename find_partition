@@ -1,0 +1,34 @@
+import java .util.*;
+public class partition {
+    static int total(int arr[]){
+        int total=0;
+        for (int i=0; i< arr.length; i++){
+            total+=arr[i];
+        }
+        return total;
+     }
+     static boolean equalpartation(int arr[]){
+        int totalsum= total(arr);
+        int presum=0;
+        for(int i=0; i< arr.length; i++) {
+            presum += arr[i];
+            int sum = totalsum - presum;
+            if (sum == presum) {
+                return true;
+            }
+        }
+                return false;
+        }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of an array");
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        System.out.println("enter element" + n);
+        for(int i=0; i< arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.println(equalpartation(arr));
+            suffix(arr);
+    }
+}
