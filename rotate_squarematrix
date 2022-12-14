@@ -1,0 +1,56 @@
+import java.util.*;
+public class rotate_squarematrix {
+    static void printmatrix(int [][]arr){
+        for (int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[i].length; j++)
+            {
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+    static void reverse(int[]arr){
+        int j= arr.length-1;
+        int i=0;
+        while(i<j){
+           int temp= arr[i];
+           arr[i]= arr[j];
+           arr[j]= temp;
+           i++;
+           j--;
+        }
+    }
+    static void findtranspose1(int[][]arr, int r){
+        for (int i=0; i<r; i++){
+            for(int j=i; j<r; j++)
+            {
+                int temp= arr[i][j];
+               arr[i][j]=arr[j][i];
+               arr[j][i]= temp;
+            }
+        }
+    }
+    static void rotatematrix(int[][]arr, int r){
+        findtranspose1(arr,r);
+        for(int i=0; i<r; i++){
+            reverse(arr[i]);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter square matrix");
+        int r = sc.nextInt();
+        int[][] arr = new int[r][r];
+        System.out.println("enter element");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println("enterd matrix ");
+        printmatrix(arr); 
+        rotatematrix(arr,r);      
+       System.out.println("rotate of the matrix is");
+       printmatrix(arr);      
+    }    
+}
