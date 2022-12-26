@@ -1,0 +1,56 @@
+import java.util.*;
+public class spiral {
+    static void printarray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void sp(int arr[][], int r, int c){
+            int toprow = 0, leftcol = 0, rightcol = c - 1, bottomrow = r - 1, total=0;
+        while(total<r*c){
+            for (int i = leftcol; i <= rightcol && total<r*c; i++) {
+                System.out.print(arr[toprow][i]+" ");
+                total++;
+            }
+            toprow++;
+            for (int i = toprow; i <= bottomrow && total<r*c; i++) {
+                System.out.print(arr[i][rightcol]+" ");
+                total++;
+            }
+            rightcol--;
+            for (int i = rightcol; i >= leftcol && total<r*c; i--) {
+                System.out.print(arr[bottomrow][i]+" ");
+                total++;
+            }
+            bottomrow--;
+
+            for (int i = bottomrow; i >= toprow && total<r*c; i--) {
+                System.out.print(arr[i][leftcol]+" ");
+                total++;
+            }
+            leftcol++;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter row");
+        int r= sc.nextInt();
+        System.out.println("enter col");
+        int c= sc.nextInt();
+        int[][] arr = new int[r][c];
+        System.out.println("enter element");
+        for (int i=0; i< arr.length; i++){
+            for (int j=0; j< arr[i].length; j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        printarray(arr);
+        sp(arr,r,c);
+
+    }
+}
