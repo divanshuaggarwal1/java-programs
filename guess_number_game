@@ -1,0 +1,43 @@
+import java.util.*;
+class random{
+    int r,input,guess=1;
+    Scanner sc =new Scanner(System.in);
+    random(){
+        Random rand= new Random();
+        r= rand.nextInt(1 , 10);
+        System.out.println("enter number 1 to 10");
+    }
+    public void takeinput(){
+        input =sc.nextInt();
+    }
+    public void setGuess(){
+        guess++;
+    }
+    public int getGuess(){
+        return guess;
+    }
+    public void iscorrect() {
+        if (r==input){
+            System.out.println("you guess right");
+        }
+    }
+}
+public class gametest {
+    public static void main(String[] args) {
+        random rand = new random();
+        rand.takeinput();
+        while(rand.r!=rand.input){
+            if(rand.input<rand.r){
+                System.out.println("enter bigger");
+            }
+            else{
+                System.out.println("enter smaller");
+            }
+            System.out.println("try again");
+            rand.setGuess();
+            rand.takeinput();
+        }
+        rand.iscorrect();
+        System.out.println("numbe of guess "+rand.getGuess());
+    }
+    }
