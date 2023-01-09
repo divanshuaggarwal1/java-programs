@@ -1,0 +1,29 @@
+ class phone{
+       public void on(){
+            System.out.println("phone is turning on");}
+           public void call(){
+                System.out.println("phone is calling");
+            }
+        }
+
+    class smartphone extends phone{
+       public void on() {
+           System.out.println("smartphone is turning on");
+       }
+           public void call(){
+                System.out.println("smartphone is calling");
+            }
+        public void music(){
+            System.out.println("smartphone is playing music");
+        }
+        }
+
+ public class dynamic_method_dispatch {
+     public static void main(String[] args) {
+         phone obj = new smartphone();
+         obj.call();
+         obj.on();
+        // obj.music(); not allowed
+
+     }
+}
