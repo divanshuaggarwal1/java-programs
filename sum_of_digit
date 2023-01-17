@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class sum_of_digit {
+    public static void main(String[] args) {
+        System.out.println("enter value");
+        Scanner sc= new Scanner(System.in);
+        int n= sc.nextInt();
+        System.out.println(sumdigit(n));
+
+    }
+   static int sumdigit(int n){
+        if(n>=0&&n<=9){
+            return n;
+        }
+        return sumdigit(n / 10) + (n % 10);
+
+   }
+    }
